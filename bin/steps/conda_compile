@@ -9,7 +9,7 @@ if [ ! -d /app/.heroku/miniconda ]; then
     conda update conda --quiet --yes | indent
 fi
 
-conda env --help || conda update conda --quiet --yes | indent
+(puts-setp "Checking for conda env" && conda env &> /dev/null) || conda update conda --quiet --yes | indent
 
 if [ -f conda-requirements.txt ]; then
     puts-step "Installing dependencies using Conda"
