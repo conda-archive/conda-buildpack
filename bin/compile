@@ -87,9 +87,9 @@ done
 
 # Set context environment variables.
 set-env PATH '$HOME/.heroku/miniconda/bin:$PATH'
-PYTHONPATH='/app/.heroku/miniconda/lib/python2.7/site-packages:$PYTHONPATH'
+PYTHONPATH='/app/.heroku/miniconda/lib/python3.6/site-packages:$PYTHONPATH'
 if [ -f environment.yml ]; then
-  PYTHONPATH="/app/.heroku/miniconda/envs/heroku-env/lib/python2.7/site-packages:${PYTHONPATH}"
+  PYTHONPATH="/app/.heroku/miniconda/envs/heroku-env/lib/python3.6/site-packages:${PYTHONPATH}"
   set-default-env CONDA_DEFAULT_ENV "heroku-env"
 fi
 set-default-env PYTHONPATH $PYTHONPATH
