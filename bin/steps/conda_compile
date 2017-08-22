@@ -11,7 +11,7 @@ fi
 
 
 if [ -f conda-requirements.txt ]; then
-    puts-step "Installing dependencies using Conda"
+    puts-step "Installing dependencies using Conda3"
     conda install --file conda-requirements.txt --yes
 fi
 
