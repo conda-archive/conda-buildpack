@@ -17,8 +17,11 @@ fi
 
 if [ -f environment.yml ]; then
     puts-step "Creating conda environment"
-    # TODO: Use update if its already there
-    conda env remove --yes --quiet --name heroku-env
+    # Remove existing environment if it already exists
+    if conda env list | grep "heroku-env" > /dev/null
+        then 
+            conda env remove --yes --quiet --name heroku-env
+    fi
     conda env create --name=heroku-env --file environment.yml
 fi
 
