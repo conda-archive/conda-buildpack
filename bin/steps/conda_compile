@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-CONDA_VERSION=3.8.3
+CONDA_VERSION=latest
 if [ ! -d /app/.heroku/miniconda ]; then
-    puts-step "Preparing Python/Miniconda Environment (${CONDA_VERSION})"
-    curl -Os http://repo.continuum.io/miniconda/Miniconda-${CONDA_VERSION}-Linux-x86_64.sh
-    bash Miniconda-${CONDA_VERSION}-Linux-x86_64.sh -p /app/.heroku/miniconda/ -b | indent
-    rm -fr Miniconda-${CONDA_VERSION}-Linux-x86_64.sh
+    puts-step "Preparing Python/Miniconda3 Environment (${CONDA_VERSION})"
+    curl -Os http://repo.continuum.io/miniconda/Miniconda3-${CONDA_VERSION}-Linux-x86_64.sh
+    bash Miniconda3-${CONDA_VERSION}-Linux-x86_64.sh -p /app/.heroku/miniconda/ -b | indent
+    rm -fr Miniconda3-${CONDA_VERSION}-Linux-x86_64.sh
 
     conda update conda --quiet --yes | indent
 fi
