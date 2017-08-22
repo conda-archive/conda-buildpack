@@ -1,6 +1,9 @@
 Conda Environment Buildpack
 ===========================
 
+Update (Aug-21, 2017): Updated the origin conda-buildpack to use Python 3.6 by default. 
+
+
 This is the [Heroku Buildpack][] for [Conda][] using it's new
 [environment spec][].  Anything you can install with `conda install` can be
 installed using this, including the entire data science stack.  Be careful of
