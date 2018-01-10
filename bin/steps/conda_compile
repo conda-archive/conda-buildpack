@@ -22,6 +22,10 @@ if [ -f environment.yml ]; then
     # TODO: Use update if its already there
     conda env remove --yes --quiet --name heroku-env || puts-step "No old environment to remove"
     conda env create --name=heroku-env --file environment.yml
+    puts-step "Conda environment created"
+    conda activate heroku-env
+    conda install nomkl numpy
+    conda remove mkl mkl-service
 fi
 
 # Clean up the installation environment .
