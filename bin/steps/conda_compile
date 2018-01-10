@@ -3,7 +3,7 @@ CONDA_VERSION=4.3.31
 puts-step "Checking for existing conda install"
 if [ ! -d /app/.heroku/miniconda ]; then
     puts-step "Preparing Python/Miniconda Environment (${CONDA_VERSION})"
-    curl -Os http://repo.continuum.io/miniconda/Miniconda3-${CONDA_VERSION}-Linux-x86_64.sh
+    curl -Os https://repo.continuum.io/miniconda/Miniconda3-${CONDA_VERSION}-Linux-x86_64.sh
     bash Miniconda3-${CONDA_VERSION}-Linux-x86_64.sh -p /app/.heroku/miniconda/ -b | indent
     rm -fr Miniconda3-${CONDA_VERSION}-Linux-x86_64.sh
 
