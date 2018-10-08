@@ -24,7 +24,7 @@ if [ -f environment.yml ]; then
     conda env create --name=heroku-env --file environment.yml
     puts-step "Conda environment created"
     source activate heroku-env
-    conda install --yes nomkl numpy
+    # conda install --yes nomkl numpy
     conda remove --yes mkl mkl-service
 fi
 
