@@ -91,6 +91,7 @@ PYTHONPATH='/app/.heroku/miniconda/lib/python2.7/site-packages:$PYTHONPATH'
 if [ -f environment.yml ]; then
   PYTHONPATH="/app/.heroku/miniconda/envs/heroku-env/lib/python2.7/site-packages:${PYTHONPATH}"
   set-default-env CONDA_DEFAULT_ENV "heroku-env"
+  set-env PATH '$HOME/.heroku/miniconda/envs/heroku-env/bin:$PATH'
 fi
 set-default-env PYTHONPATH $PYTHONPATH
 set-env PYTHONUNBUFFERED true
